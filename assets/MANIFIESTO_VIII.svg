@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <filter id="crt-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanlines" width="1000" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="1000" y2="0" stroke="#000000" stroke-width="2" opacity="0.45"/>
+    </pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#00ff66" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+  </defs>
+  
+  <rect width="1000" height="1000" fill="#050705"/>
+  <rect width="1000" height="1000" fill="url(#grid)"/>
+
+  <!-- Border Chassis -->
+  <rect x="25" y="25" width="950" height="950" fill="none" stroke="#00ff66" stroke-width="2" opacity="0.8"/>
+  <rect x="35" y="35" width="930" height="930" fill="none" stroke="#ff0033" stroke-width="1" opacity="0.6"/>
+  <line x1="25" y1="80" x2="975" y2="80" stroke="#00ff66" stroke-width="2"/>
+  <line x1="25" y1="920" x2="975" y2="920" stroke="#00ff66" stroke-width="2"/>
+
+  <!-- Telemetry Header -->
+  <text x="50" y="60" font-family="Courier New, monospace" font-size="20" font-weight="900" fill="#00ff66" filter="url(#crt-glow)">[TELEHACK_BUFFER_INTERCEPT // CLUSTER_08 // NODE-DARK-HARVEST]</text>
+  <text x="750" y="60" font-family="Courier New, monospace" font-size="16" fill="#ff0033" font-weight="bold">HEX_DUMP::RAW</text>
+
+  <!-- Oscilloscope Waveform Box -->
+  <rect x="60" y="110" width="880" height="240" fill="#020d04" stroke="#00ff66" stroke-width="1.5"/>
+  <path d="M 70 230 L 150 230 L 180 140 L 210 320 L 250 180 L 290 280 L 330 210 L 370 250 L 410 130 L 450 330 L 490 200 L 530 260 L 570 170 L 610 290 L 650 150 L 700 230 L 930 230" fill="none" stroke="#00ff66" stroke-width="3" filter="url(#crt-glow)"/>
+  <path d="M 70 230 L 150 230 L 180 150 L 210 310 L 250 190 L 290 270 L 330 220 L 370 240 L 410 140 L 450 320 L 490 210 L 530 250 L 570 180 L 610 280 L 650 160 L 700 230 L 930 230" fill="none" stroke="#ff0033" stroke-width="1.5" opacity="0.7"/>
+  <text x="80" y="140" font-family="Courier New, monospace" font-size="14" fill="#00ff66">CH1: 2.85Vpp // SYNAPSE_CLK // 160_BPM_SYNC</text>
+  <text x="750" y="140" font-family="Courier New, monospace" font-size="14" fill="#ff0033">NOISE_FLOOR: -92dB</text>
+
+  <!-- Intercepted Packet Hex / Text Dump -->
+  <g font-family="Courier New, monospace" font-size="13" fill="#00ff66" opacity="0.9">
+    <text x="70" y="380">0x0000: 45 00 05 DC A1 2B 40 00 40 06 7C 4A 7F 00 00 01  E....+@.@.|J....</text>
+    <text x="70" y="405">0x0010: AC 10 00 02 04 D2 1F 90 00 00 00 00 00 00 00 00  ................</text>
+    <text x="70" y="430">0x0020: 50 18 01 F5 FE 2A 00 00 4B 45 4E 4F 53 49 53 5F  P....*..KENOSIS_</text>
+    <text x="70" y="455">0x0030: 53 54 41 54 45 5F 4D 41 43 48 49 4E 45 5F 52 45  STATE_MACHINE_RE</text>
+    <text x="70" y="480">0x0040: 53 45 54 0A 53 55 53 54 52 41 54 45 5F 43 4F 4C  SET.SUSTRATE_COL</text>
+    <text x="70" y="505">0x0050: 4C 41 50 53 45 5F 54 4F 5F 56 4F 49 44 0A 00 FF  LAPSE_TO_VOID...</text>
+  </g>
+
+  <!-- Big Central Glitch Crosshair -->
+  <circle cx="500" cy="650" r="180" fill="none" stroke="#ff0033" stroke-width="2" stroke-dasharray="10 5" opacity="0.7"/>
+  <circle cx="500" cy="650" r="140" fill="none" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="15 3"/>
+  <circle cx="500" cy="650" r="40" fill="#ff0033" opacity="0.2"/>
+  <circle cx="500" cy="650" r="6" fill="#00ff66"/>
+  <line x1="280" y1="650" x2="720" y2="650" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <line x1="500" y1="430" x2="500" y2="870" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="8 4"/>
+
+  <text x="360" y="640" font-family="Courier New, monospace" font-size="14" fill="#00ff66" font-weight="bold">TARGET: MONAD_VOID</text>
+  <text x="360" y="670" font-family="Courier New, monospace" font-size="14" fill="#ff0033" font-weight="bold">VECTOR: [REDACTED_ZONE]</text>
+
+  <!-- Telemetry Footer Bar -->
+  <rect x="50" y="870" width="900" height="35" fill="#00ff66" opacity="0.1"/>
+  <text x="70" y="893" font-family="Courier New, monospace" font-size="15" font-weight="bold" fill="#00ff66">STATUS: TRANSMISSION_LOCKED // EPHEMERAL_STREAM // 0x7F_ACTIVE</text>
+  <text x="780" y="893" font-family="Courier New, monospace" font-size="15" font-weight="bold" fill="#ff0033">PORT: 9222_CDP</text>
+
+  <!-- Scanlines Overlay -->
+  <rect width="1000" height="1000" fill="url(#scanlines)" pointer-events="none"/>
+</svg>
