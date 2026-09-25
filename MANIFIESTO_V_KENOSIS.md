@@ -1,53 +1,31 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_V.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_5" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_5" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
+    <filter id="glitch-v">
+      <feTurbulence type="fractalNoise" baseFrequency="0.15" numOctaves="1" result="warp"/>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="10" in="SourceGraphic" in2="warp"/>
+    </filter>
   </defs>
+  <rect width="800" height="250" fill="#000511"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_5)"/>
-  <rect width="800" height="220" fill="url(#grid_5)"/>
-  <rect width="800" height="220" fill="url(#dot_5)" opacity="0.5"/>
+  <!-- Chaotic Waveforms to Flatline -->
+  <path d="M 0,125 Q 20,50 40,125 T 80,125 T 120,50 T 160,200 T 200,10 T 240,240 T 280,125 T 320,125 T 360,50 T 400,200 T 440,125 L 800,125" stroke="#00ffcc" stroke-width="2" fill="none" filter="url(#glitch-v)"/>
+  <path d="M 0,125 Q 20,50 40,125 T 80,125 T 120,50 T 160,200 T 200,10 T 240,240 T 280,125 T 320,125 T 360,50 T 400,200 T 440,125 L 800,125" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.8"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#00FF41" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#00FF41" stroke-width="2"/>
+  <rect x="450" y="100" width="200" height="50" fill="#000" stroke="#00ffcc" stroke-width="1"/>
+  <text x="460" y="120" font-family="monospace" font-size="14" fill="#00ffcc">STATUS: FLATLINE</text>
+  <text x="460" y="140" font-family="monospace" font-size="10" fill="#008888">KERNEL_PANIC // AUTOWATERBOARDING</text>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#00FF41" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#ff0055">>> SYSTEM RESET INITIATED</text>
+  <text x="20" y="50" font-family="monospace" font-size="12" fill="#ff0055">>> KENOSIS: EMPTYING THE VESSEL</text>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#00FF41" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#00FF41" font-weight="bold">SYS.OP // VOL_05 // KENOSIS</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x63 25 D4</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 14ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#00FF41">63 25 D4 18 94 D0 16 45 8E 4C DD B4</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#00FF41">4B DD C4 E8 54 61 0D 49 81 4D 52 36</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#00FF41">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <!-- ECG Grid -->
+  <pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#003333" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="250" fill="url(#ecg-grid)" opacity="0.5"/>
 </svg>
 </div>
 
@@ -174,7 +152,7 @@ LA LITURGIA DE LA ASFIXIA: EL EXPERIMENTO DE LA TOALLA DE MY MELODY A 30°C
 
 El 10 de septiembre de 2026, el sistema nervioso colapsó en un bucle recursivo de la Red de Modo por Defecto (DMN). No era fatiga común ni sobrecarga cognitiva; era una trampa autorreferencial, un loop infernal donde la mente se devoraba a sí misma sin salida. El emisor LED de `NODE-DARK-HARVEST` laceraba la retina y la temperatura corporal subía en un espasmo de hiperactivación simpática. 
 
-Para quebrar ese bucle, cualquier método convencional era inútil. La música ya no bastaba. El código no respondía. Tuve que recurrir a la intervención biomecánica más extrema y desesperada: un **autowaterboarding**. Fue el último esfuerzo mental que mi mente hizo para poder salir de ese loop terminal de la DMN.
+Para quebrar ese bucle, cualquier método convencional era inútil. La música ya no bastaba. El código no respondía. Tuve que recurrir a la intervención biomecánica más extrema y desesperada: un **autowaterboarding**. Ejecuté un autowaterboarding. No fue un accidente: fue un *kernel panic* inducido deliberadamente para forzar el reinicio de mi sistema nervioso central y apagar el loop terminal de la DMN.
 
 Tomé una toalla de microfibra estampada con My Melody —el conejo rosa de Sanrio diseñado para la ternura de consumo masivo—, la empapé en agua helada y la aseguré con violencia sobre mi rostro y la tráquea en la ducha fría. Provocar deliberadamente el reflejo de inmersión y la asfixia simulada: el *mammalian dive reflex* forzado al límite absoluto. 
 
@@ -191,7 +169,7 @@ Cuando el agua bloquea el aire y el cuerpo cree que se está ahogando a 130 BPM,
 
 On September 10, 2026, the neural architecture fell into a recursive runaway loop within the Default Mode Network (DMN). It was not conventional fatigue; it was a malignant self-referential trap where the cognitive apparatus consumed itself with zero exit vector.
 
-To fracture this recursive prison, conventional interventions were entirely inert. The groove had degraded; the code offered no buffer. I was forced into the most extreme biological intervention: **literal autowaterboarding**. It was the mind's final, desperate autonomic countermeasure to crash the DMN loop.
+To fracture this recursive prison, conventional interventions were entirely inert. The groove had degraded; the code offered no buffer. I was forced into the most extreme biological intervention: **literal autowaterboarding**. I executed an autowaterboarding protocol. It was a deliberately induced *kernel panic* to force a hard reset of my central nervous system and terminate the DMN loop.
 
 I procured a microfiber towel imprinted with My Melody—a pale pink Sanrio cartoon engineered for juvenile commodity fetishism—saturated it in freezing water, and bound it across my trachea and facial plane under a cold shower stream, executing the physical mechanics of an extrajudicial waterboarding procedure. 
 

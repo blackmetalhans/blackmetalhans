@@ -1,53 +1,32 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_VII.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="grid_7" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_7" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_7" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
-  </defs>
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="250" fill="#000000"/>
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="250" cy="80" r="1.5" fill="#fff" opacity="0.8"/>
+  <circle cx="600" cy="30" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="700" cy="150" r="2" fill="#fff" opacity="0.9"/>
+  <circle cx="50" cy="200" r="1" fill="#fff" opacity="0.4"/>
+  <circle cx="450" cy="220" r="1.5" fill="#fff" opacity="0.7"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_7)"/>
-  <rect width="800" height="220" fill="url(#grid_7)"/>
-  <rect width="800" height="220" fill="url(#dot_7)" opacity="0.5"/>
+  <!-- Orbital Trajectories -->
+  <ellipse cx="400" cy="125" rx="350" ry="100" fill="none" stroke="#223344" stroke-width="1" stroke-dasharray="10 5"/>
+  <ellipse cx="400" cy="125" rx="200" ry="50" fill="none" stroke="#334455" stroke-width="1" stroke-dasharray="5 5"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#00E5FF" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#00E5FF" stroke-width="2"/>
+  <!-- Cold Void Core -->
+  <circle cx="400" cy="125" r="40" fill="#000" stroke="#556677" stroke-width="2"/>
+  <circle cx="400" cy="125" r="42" fill="none" stroke="#8899aa" stroke-width="1" opacity="0.5"/>
+  <circle cx="400" cy="125" r="45" fill="none" stroke="#aabbcc" stroke-width="0.5" opacity="0.2"/>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#00E5FF" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <!-- Lone Object -->
+  <circle cx="200" cy="125" r="5" fill="#00ffff"/>
+  <line x1="200" y1="125" x2="180" y2="90" stroke="#00ffff" stroke-width="1"/>
+  <text x="170" y="80" font-family="monospace" font-size="10" fill="#00ffff">OBJ_ISOLATION_01</text>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#00E5FF" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#00E5FF" font-weight="bold">SYS.OP // VOL_07 // COSMOLOGIA</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x79 59 93</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 9ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#00E5FF">79 59 93 DF AC 4C 47 7B 3A CD DE 80</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#00E5FF">08 ED DC A3 B7 74 C4 CA FD 39 95 97</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#00E5FF">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#556677">CELESTIAL MECHANICS // ABSOLUTE ZERO</text>
+  <text x="20" y="50" font-family="monospace" font-size="10" fill="#445566">GRAVITY_WELL: COLLAPSING</text>
 </svg>
 </div>
 

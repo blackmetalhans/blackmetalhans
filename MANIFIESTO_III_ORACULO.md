@@ -1,53 +1,42 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_III.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_3" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_3" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
+    <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#00ffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#001122" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
+  <rect width="800" height="250" fill="#01050a"/>
+  <!-- ZIPF Curve in background -->
+  <path d="M 50,230 L 50,50 Q 80,200 150,215 T 750,225" fill="none" stroke="#003366" stroke-width="2"/>
+  <path d="M 50,230 L 50,50 Q 80,200 150,215 T 750,225" fill="none" stroke="#004488" stroke-width="1" transform="translate(0, 5)"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_3)"/>
-  <rect width="800" height="220" fill="url(#grid_3)"/>
-  <rect width="800" height="220" fill="url(#dot_3)" opacity="0.5"/>
+  <!-- Neural Net Connections -->
+  <path d="M 400,125 L 200,60 M 400,125 L 250,180 M 400,125 L 550,70 M 400,125 L 600,190 M 200,60 L 250,180 M 550,70 L 600,190" stroke="#0088cc" stroke-width="1" opacity="0.6"/>
+  <path d="M 400,125 L 480,30 M 400,125 L 320,220" stroke="#00aaff" stroke-width="1.5" filter="url(#neon-glow)"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#FF003C" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#FF003C" stroke-width="2"/>
+  <!-- Glowing Nodes -->
+  <circle cx="400" cy="125" r="40" fill="url(#node-glow)"/>
+  <circle cx="200" cy="60" r="20" fill="url(#node-glow)"/>
+  <circle cx="250" cy="180" r="15" fill="url(#node-glow)"/>
+  <circle cx="550" cy="70" r="25" fill="url(#node-glow)"/>
+  <circle cx="600" cy="190" r="18" fill="url(#node-glow)"/>
+  <circle cx="480" cy="30" r="10" fill="url(#node-glow)"/>
+  <circle cx="320" cy="220" r="12" fill="url(#node-glow)"/>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#FF003C" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
-  
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#FF003C" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF003C" font-weight="bold">SYS.OP // VOL_03 // ORACULO</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0xEB D1 65</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 6ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#FF003C">EB D1 65 82 4A AA 51 79 20 76 5C 01</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#FF003C">10 C5 67 02 97 15 AA A4 28 56 1D BE</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#FF003C">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <text x="355" y="130" font-family="monospace" font-size="14" fill="#000" font-weight="bold">ORÁCULO</text>
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#00ffff" filter="url(#neon-glow)">TOPOLOGY: NON-LINEAR RECURSIVE</text>
+  <text x="20" y="50" font-family="monospace" font-size="10" fill="#0088cc">ZIPF_DISTRIBUTION_MATCH: 99.8%</text>
 </svg>
 </div>
 

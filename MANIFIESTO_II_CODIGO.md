@@ -1,53 +1,33 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_II.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_2" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <pattern id="mem-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#112211" stroke-width="1"/>
+      <rect width="38" height="38" x="1" y="1" fill="#020502"/>
     </pattern>
-    <pattern id="dot_2" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
   </defs>
-  
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_2)"/>
-  <rect width="800" height="220" fill="url(#grid_2)"/>
-  <rect width="800" height="220" fill="url(#dot_2)" opacity="0.5"/>
-  
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#00E5FF" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#00E5FF" stroke-width="2"/>
-  
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#00E5FF" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
-  
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#00E5FF" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#00E5FF" font-weight="bold">SYS.OP // VOL_02 // CODIGO</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0xEF 6E 0E</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 3ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#00E5FF">EF 6E 0E 51 A0 D2 10 9C D1 F3 9C C1</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#00E5FF">1C C9 3F 1D C9 01 2D 0A 15 E0 E6 FE</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#00E5FF">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <rect width="800" height="250" fill="#000000"/>
+  <rect width="800" height="250" fill="url(#mem-grid)"/>
+  <text x="50" y="40" font-family="monospace" font-size="12" fill="#00ffcc">0x00007FF7A5B1</text>
+  <text x="200" y="40" font-family="monospace" font-size="12" fill="#44aa88">48 89 5C 24 08 48 89 74 24 10 57 48 83 EC 20</text>
+  <text x="650" y="40" font-family="monospace" font-size="12" fill="#225544">H.\$..H.t$.WH..</text>
+  <text x="50" y="65" font-family="monospace" font-size="12" fill="#00ffcc">0x00007FF7A5C0</text>
+  <text x="200" y="65" font-family="monospace" font-size="12" fill="#44aa88">33 FF 48 8B F1 48 8D 05 9A 12 00 00 48 89 01</text>
+  <text x="650" y="65" font-family="monospace" font-size="12" fill="#225544">3.H..H......H..</text>
+  <text x="50" y="90" font-family="monospace" font-size="12" fill="#00ffcc">0x00007FF7A5CF</text>
+  <text x="200" y="90" font-family="monospace" font-size="12" fill="#ff0055">CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC</text>
+  <text x="650" y="90" font-family="monospace" font-size="12" fill="#ff0055">...............</text>
+  <rect x="40" y="120" width="720" height="2" fill="#00ffcc"/>
+  <rect x="40" y="130" width="300" height="40" fill="#052211" stroke="#00ffcc" stroke-width="1"/>
+  <text x="50" y="155" font-family="monospace" font-size="14" fill="#00ffcc">ALLOC_SIZE: 0x4000 (16KB)</text>
+  <rect x="360" y="130" width="400" height="40" fill="#220505" stroke="#ff0055" stroke-width="1"/>
+  <text x="370" y="155" font-family="monospace" font-size="14" fill="#ff0055">EXCEPTION_ACCESS_VIOLATION</text>
+  <!-- Glitch bars -->
+  <rect x="250" y="78" width="80" height="15" fill="#000"/>
+  <text x="250" y="90" font-family="monospace" font-size="12" fill="#ffffff">##ERR_SEG##</text>
+  <text x="700" y="240" font-family="monospace" font-size="10" fill="#00ffcc">BRUTALIST_DATA_STRUCTURES</text>
 </svg>
 </div>
 

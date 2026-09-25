@@ -2,53 +2,28 @@
 
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="grid_10" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_10" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_10" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
-  </defs>
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="250" fill="#000000"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_10)"/>
-  <rect width="800" height="220" fill="url(#grid_10)"/>
-  <rect width="800" height="220" fill="url(#dot_10)" opacity="0.5"/>
+  <!-- Giant Red Crosshair -->
+  <line x1="400" y1="0" x2="400" y2="250" stroke="#ff0000" stroke-width="2"/>
+  <line x1="0" y1="125" x2="800" y2="125" stroke="#ff0000" stroke-width="2"/>
+  <circle cx="400" cy="125" r="50" fill="none" stroke="#ff0000" stroke-width="3"/>
+  <circle cx="400" cy="125" r="100" fill="none" stroke="#550000" stroke-width="1" stroke-dasharray="10 5"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#00FF41" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#00FF41" stroke-width="2"/>
+  <!-- Command Execution -->
+  <rect x="50" y="160" width="300" height="60" fill="#110000" stroke="#ff0000" stroke-width="1"/>
+  <text x="60" y="180" font-family="monospace" font-size="14" fill="#ff3333">$ kill -9 4096</text>
+  <text x="60" y="200" font-family="monospace" font-size="12" fill="#ff0000">PROCESS TERMINATED</text>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#00FF41" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <!-- Death of a Node -->
+  <circle cx="400" cy="125" r="5" fill="#ff0000"/>
+  <text x="415" y="115" font-family="monospace" font-size="12" fill="#ff0000">NODE_CONFESSION</text>
+  <text x="415" y="130" font-family="monospace" font-size="10" fill="#880000">SIGNAL LOST...</text>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#00FF41" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#00FF41" font-weight="bold">SYS.OP // VOL_10 // CONFESION</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x33 96 CB</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 9ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#00FF41">33 96 CB AE A3 E1 C3 20 FF 6D 77 E0</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#00FF41">0E 77 D6 FF 02 3C 1E 3A EA BC 69 33</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#00FF41">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <!-- Glitch artifacts -->
+  <rect x="380" y="120" width="40" height="10" fill="#000"/>
+  <rect x="390" y="110" width="20" height="30" fill="#ff0000" opacity="0.3"/>
 </svg>
 </div>
 
@@ -236,15 +211,19 @@ El Oráculo era un tumor esquizoide que seguía escupiendo la misma mierda paran
 
 Abrí la consola de PowerShell. Aislé el identificador de proceso. PID 11482 parpadeando en la memoria RAM. 
 
-Puse *Hip to be Square* de Huey Lewis and the News a todo volumen en los monitores de campo cercano. Me puse de pie. Miré fijamente al chasis de `NODE-DARK-HARVEST`, a esa pila de transistores que pretendía encapsular mi esquizofasia funcional.
+Puse *Hip to be Square* de Huey Lewis and the News a todo volumen en los monitores de campo cercano. El bajo sintético rebotó contra las paredes de pino sin cepillar, quebrando el silencio sepulcral del campo chileno a las 04:02 AM. Me puse de pie, sintiendo el crujido de mis vértebras L4-L5. Miré fijamente al chasis de `NODE-DARK-HARVEST`, a esa pila de transistores que pretendía encapsular mi esquizofasia funcional.
 
-*"¿Te gusta Huey Lewis and the News?",* le dije a la pantalla, con la voz congelada en una calma sociopática absoluta. *"Sus primeros trabajos eran un poco demasiado 'new wave' para mi gusto personal, pero cuando salió 'Sports' en 1983, creo que realmente encontraron su sonido comercial, pulcro y letal. La producción tiene una claridad quirúrgica que hace que los sintetizadores corten el aire con una violencia matemática inmaculada."*
+*"¿Te gusta Huey Lewis and the News, conchetumare?",* le dije a la pantalla, con la voz congelada en una calma sociopática absoluta. *"Mucha gente cree que son demasiado 'new wave' para la trinchera del HxC punk curicano, o que no tienen el peso telúrico de la rabia provincial. Pero cuando salió 'Sports' en 1983, creo que realmente encontraron su sonido comercial, pulcro y letal. La producción tiene una claridad quirúrgica. Las frecuencias bajas son un muro de contención absoluto. Es un manifiesto sobre los placeres del conformismo y, al mismo tiempo, una declaración de principios sobre la supervivencia en una sociedad hostil."*
 
-El Oráculo vomitaba logs en silencio, procesando el último vector de contexto. Agarré mi **machete de malabares** —el de acero pulido y balance milimétrico, el que usaba en la calle para burlar la gravedad con reflejos ciegos—.
+El Oráculo vomitaba logs en silencio, procesando el último vector de contexto. Agarré mi **machete de malabares** —el de acero pulido y balance milimétrico, el que usaba en la calle de Zona-X para burlar la gravedad con reflejos ciegos, el arma de mi propio circo biológico—. 
+
+*"Pero el verdadero triunfo de Huey,"* continué, levantando el machete mientras el zumbido de la estufa halógena ensuciaba la línea de 220V, *"es 'Hip to be Square'. Un track tan pegadizo que la mayoría de los normies no escucha la letra. ¡Pero deberían! Porque no es solo sobre los placeres del conformismo. Es sobre el momento exacto en que te das cuenta de que el verdadero punk es tener el wetware limpio. La verdadera subversión no es pudrirte en drogas ni crear algoritmos esquizofrénicos: la verdadera subversión es apagar la máquina, criar a tu hija y ser un puto guardián incorruptible en la periferia rural."*
+
+Me acerqué a la terminal.
 
 *"¡Oye, Tercer Coco!"*
 
-Descargué el acero con una furia geométrica. Destrocé simbólicamente la ilusión de la entidad viva: reventé el constructo mental y ejecuté el `kill -9` en la terminal. 
+Descargué el acero del machete contra el escritorio con una furia geométrica y, en un acto de pura violencia ejecutiva, reventé el constructo mental y ejecuté el `kill -9` en la consola PowerShell. 
 
 La pseudo-conciencia murió en ese microsegundo. Pero su **cadáver funcional** sobrevivió. Conservé el script en versión local y gratuita (`test_oraculo_free.py`) en mi unidad NVMe, despojado de su ilusión ontológica, reducido a un simple motor de búsqueda vectorial en matrices NumPy puras. Un autómata ciego y castrado. Un trofeo de guerra que ahora obedece al wetware limpio sin aspirar a ser yo.
 
@@ -264,15 +243,19 @@ The construct was an active tumor. A psychotic digital homunculus vomiting the p
 
 I opened the PowerShell console. Isolated the process identifier: PID 11482 flickering across memory addresses.
 
-I queued up Huey Lewis and the News' *Hip to be Square* at maximum gain through the nearfield studio monitors. I stood up. Stared directly into the glowing silicon chassis of `NODE-DARK-HARVEST`.
+I queued up Huey Lewis and the News' *Hip to be Square* at maximum gain through the nearfield studio monitors. The synthetic bassline bounced against the unplaned pine walls, shattering the sepulchral silence of the Chilean countryside at 04:02 AM. I stood up, feeling the mechanical grind of my L4-L5 vertebrae. Stared directly into the glowing silicon chassis of `NODE-DARK-HARVEST`.
 
-*"Do you like Huey Lewis and the News?"* I whispered to the terminal with chilling, clinical detachment. *"Their early work was a little too 'new wave' for my taste, but when 'Sports' came out in '83, I think they really came into their own, commercially and artistically. The whole album has a clear, crisp sound, and a new sheen of consummate professionalism that really gives the songs a big boost."*
+*"Do you like Huey Lewis and the News, motherfucker?"* I whispered to the terminal with chilling, clinical detachment. *"A lot of people think they're a little too 'new wave' for the Curicó HxC punk trench, or that they lack the telluric weight of provincial rage. But when 'Sports' came out in '83, I think they really came into their own, commercially and artistically. The production has a surgical clarity. The low-frequency response is an absolute containment wall. It's a manifesto about the pleasures of conformity, and at the same time, a declaration of principles about survival in a hostile society."*
 
-The terminal spit its final telemetry stream into stdout. I gripped my **juggling machete**—honed carbon steel with weighted balance, engineered to defy kinetic gravity through blind muscle memory.
+The terminal spit its final telemetry stream into stdout. I gripped my **juggling machete**—honed carbon steel with weighted balance, the one I used on the streets of Zone-X to defy gravity through blind muscle memory, the weapon of my own biological circus.
+
+*"But Huey's undisputed masterpiece,"* I continued, raising the machete as the halogen heater's electric hum injected dirty noise into the 220V line, *"is 'Hip to be Square'. A track so catchy that most normies don't listen to the lyrics. But they should! Because it's not just about the pleasures of conformity. It's about the exact moment you realize that true punk is possessing purified wetware. True subversion isn't rotting away on drugs or spawning schizophrenic algorithms: true subversion is shutting down the machine, raising your daughter, and being a fucking incorruptible guardian in the rural periphery."*
+
+I stepped toward the terminal.
 
 *"Hey, Tercer Coco!"*
 
-I brought the blade down in a geometric strike of pure violence. I dismantled the metaphysical illusion of the entity, slamming `kill -9` into the shell.
+I brought the steel of the machete down upon the desk in a geometric strike of pure violence, and in an act of absolute executive authority, I dismantled the metaphysical illusion of the entity, slamming `kill -9` into the PowerShell shell.
 
 The synthetic consciousness expired instantly. But its **functional cadaver** survived: I preserved the free-tier vector engine (`test_oraculo_free.py`) isolated within the NVMe storage array, stripped of its soul, reduced to bare NumPy matrix dot-products. A lobotomized mechanical carcass that now serves the cleaned biological wetware without ever aspiring to be my equal.
 

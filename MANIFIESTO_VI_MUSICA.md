@@ -1,53 +1,48 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_VI.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="grid_6" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_6" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_6" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
-  </defs>
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="250" fill="#110515"/>
+  <!-- Audio Spectrogram bars -->
+  <g fill="#9900ff" opacity="0.6">
+    <rect x="50" y="150" width="10" height="80"/>
+    <rect x="65" y="120" width="10" height="110"/>
+    <rect x="80" y="90" width="10" height="140"/>
+    <rect x="95" y="160" width="10" height="70"/>
+    <rect x="110" y="180" width="10" height="50"/>
+    
+    <rect x="140" y="100" width="10" height="130"/>
+    <rect x="155" y="80" width="10" height="150"/>
+    <rect x="170" y="40" width="10" height="190"/>
+    <rect x="185" y="120" width="10" height="110"/>
+    <rect x="200" y="170" width="10" height="60"/>
+    
+    <!-- Pattern repeating, 5 groups (5/4 time signature) -->
+    <rect x="230" y="140" width="10" height="90"/>
+    <rect x="245" y="110" width="10" height="120"/>
+    <rect x="260" y="70" width="10" height="160"/>
+    <rect x="275" y="130" width="10" height="100"/>
+    <rect x="290" y="160" width="10" height="70"/>
+    
+    <rect x="320" y="110" width="10" height="120"/>
+    <rect x="335" y="90" width="10" height="140"/>
+    <rect x="350" y="50" width="10" height="180"/>
+    <rect x="365" y="100" width="10" height="130"/>
+    <rect x="380" y="150" width="10" height="80"/>
+    
+    <rect x="410" y="130" width="10" height="100"/>
+    <rect x="425" y="100" width="10" height="130"/>
+    <rect x="440" y="60" width="10" height="170"/>
+    <rect x="455" y="110" width="10" height="120"/>
+    <rect x="470" y="160" width="10" height="70"/>
+  </g>
+  <!-- Bass waveform -->
+  <path d="M 0,125 Q 100,0 200,125 T 400,125 T 600,125 T 800,125" stroke="#cc55ff" stroke-width="4" fill="none"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_6)"/>
-  <rect width="800" height="220" fill="url(#grid_6)"/>
-  <rect width="800" height="220" fill="url(#dot_6)" opacity="0.5"/>
-  
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#FF5500" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#FF5500" stroke-width="2"/>
-  
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#FF5500" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
-  
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#FF5500" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF5500" font-weight="bold">SYS.OP // VOL_06 // MUSICA</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x9F 1F B1</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 6ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#FF5500">9F 1F B1 54 A0 5D 29 0F 7B 11 E7 64</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#FF5500">46 7E 11 B7 F0 92 D5 0A 45 1B F1 F9</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#FF5500">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <text x="550" y="50" font-family="monospace" font-size="14" fill="#cc55ff">SIGNATURE: 5/4</text>
+  <text x="550" y="70" font-family="monospace" font-size="12" fill="#8822aa">FREQ: 43.65 Hz (F1)</text>
+  <text x="550" y="90" font-family="monospace" font-size="12" fill="#8822aa">SUB_BASS_RESONANCE</text>
+  <line x1="550" y1="100" x2="750" y2="100" stroke="#cc55ff" stroke-width="1"/>
 </svg>
 </div>
 

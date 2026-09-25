@@ -1,53 +1,32 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_XI.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <pattern id="grid_9" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_9" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_9" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
-  </defs>
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="250" fill="#050505"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_9)"/>
-  <rect width="800" height="220" fill="url(#grid_9)"/>
-  <rect width="800" height="220" fill="url(#dot_9)" opacity="0.5"/>
+  <!-- Overlapping Venn Diagram / Sets -->
+  <circle cx="350" cy="125" r="90" fill="#ff0055" opacity="0.3" stroke="#ff0055" stroke-width="2"/>
+  <circle cx="450" cy="125" r="90" fill="#00ffcc" opacity="0.3" stroke="#00ffcc" stroke-width="2"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#F4C430" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#F4C430" stroke-width="2"/>
+  <!-- Intersection Area Highlight -->
+  <path d="M 400,52 A 90 90 0 0 1 400,198 A 90 90 0 0 1 400,52" fill="#ffffff" opacity="0.2"/>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#F4C430" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <text x="270" y="130" font-family="monospace" font-size="14" fill="#ff0055" text-anchor="middle">FLESH</text>
+  <text x="270" y="150" font-family="monospace" font-size="10" fill="#aa0033" text-anchor="middle">MORTALITY</text>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#F4C430" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#F4C430" font-weight="bold">SYS.OP // VOL_09 // ONTOLOGIA</text>
+  <text x="530" y="130" font-family="monospace" font-size="14" fill="#00ffcc" text-anchor="middle">MACHINE</text>
+  <text x="530" y="150" font-family="monospace" font-size="10" fill="#008888" text-anchor="middle">ETERNITY</text>
   
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x4C 85 45</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 3ms</text>
+  <text x="400" y="130" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">SYNTHESIS</text>
   
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#F4C430">4C 85 45 90 D9 B8 9B 27 BB 11 4F 10</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#F4C430">01 F4 11 BB 72 B9 8B 9D 09 54 58 C4</text>
+  <!-- Ontological Nodes -->
+  <circle cx="100" cy="50" r="2" fill="#fff"/>
+  <line x1="100" y1="50" x2="300" y2="100" stroke="#555" stroke-width="1" stroke-dasharray="3 3"/>
   
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#F4C430">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <circle cx="700" cy="200" r="2" fill="#fff"/>
+  <line x1="700" y1="200" x2="500" y2="150" stroke="#555" stroke-width="1" stroke-dasharray="3 3"/>
+  
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#888">ONTOLOGY // MIND VS MACHINE</text>
 </svg>
 </div>
 

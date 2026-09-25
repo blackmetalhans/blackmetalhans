@@ -1,53 +1,34 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_IV.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_4" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
-    </pattern>
-    <pattern id="dot_4" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
+    <linearGradient id="chart-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#330000"/>
+      <stop offset="100%" stop-color="#050000"/>
     </linearGradient>
   </defs>
+  <rect width="800" height="250" fill="url(#chart-bg)"/>
+  <path d="M 50,50 L 50,220 L 750,220" stroke="#ff3333" stroke-width="2"/>
+  <text x="10" y="45" font-family="monospace" font-size="10" fill="#ff3333">$500k</text>
+  <text x="10" y="135" font-family="monospace" font-size="10" fill="#883333">$250k</text>
+  <text x="10" y="225" font-family="monospace" font-size="10" fill="#551111">$0</text>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_4)"/>
-  <rect width="800" height="220" fill="url(#grid_4)"/>
-  <rect width="800" height="220" fill="url(#dot_4)" opacity="0.5"/>
+  <!-- Financial Spike -->
+  <path d="M 50,215 L 100,210 L 150,212 L 200,205 L 250,190 L 300,195 L 350,180 L 400,150 L 450,120 L 500,40 L 550,20 L 600,10 L 650,5 L 700,5" stroke="#ff0000" stroke-width="3" fill="none"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#F4C430" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#F4C430" stroke-width="2"/>
+  <!-- Fill under spike -->
+  <path d="M 50,215 L 100,210 L 150,212 L 200,205 L 250,190 L 300,195 L 350,180 L 400,150 L 450,120 L 500,40 L 550,20 L 600,10 L 650,5 L 700,5 L 700,220 L 50,220 Z" fill="#ff0000" opacity="0.1"/>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#F4C430" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <!-- Error Cascades -->
+  <text x="400" y="60" font-family="monospace" font-size="10" fill="#ffaaaa">API_LIMIT_EXCEEDED</text>
+  <text x="430" y="75" font-family="monospace" font-size="10" fill="#ffaaaa">BILLING_THRESHOLD_BREACHED</text>
+  <text x="460" y="90" font-family="monospace" font-size="10" fill="#ff5555">CRITICAL: GCP_BILL_PROJECTED_500000_USD</text>
+  <rect x="450" y="30" width="300" height="80" fill="none" stroke="#ff0000" stroke-width="1" stroke-dasharray="4 4"/>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#F4C430" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#F4C430" font-weight="bold">SYS.OP // VOL_04 // BAUTISMO</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x7B EB AE</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 9ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#F4C430">7B EB AE B9 A7 30 1E D6 1E C3 8C 42</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#F4C430">24 C8 3C E1 6D E1 03 7A 9B EA BE B7</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#F4C430">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <!-- Warning Bar -->
+  <rect x="0" y="0" width="800" height="20" fill="#ff0000"/>
+  <text x="10" y="14" font-family="monospace" font-size="12" fill="#ffffff" font-weight="bold">WARNING: FINANCIAL ANNIHILATION DETECTED // EL BAUTISMO</text>
 </svg>
 </div>
 

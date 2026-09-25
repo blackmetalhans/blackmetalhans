@@ -1,53 +1,36 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_I.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_1" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <filter id="flesh-glitch" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.2 0 0 0  0 0.1 0 0 0  0 0 0 0.8 0"/>
+    </filter>
+    <pattern id="hex-grid" width="20" height="34.64" patternUnits="userSpaceOnUse">
+      <path d="M10,0 L20,5.77 L20,17.32 L10,23.09 L0,17.32 L0,5.77 Z" fill="none" stroke="#2a1010" stroke-width="0.5"/>
     </pattern>
-    <pattern id="dot_1" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
+    <linearGradient id="blood-tech" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0202"/>
+      <stop offset="50%" stop-color="#2a0505"/>
+      <stop offset="100%" stop-color="#0a0202"/>
     </linearGradient>
   </defs>
-  
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_1)"/>
-  <rect width="800" height="220" fill="url(#grid_1)"/>
-  <rect width="800" height="220" fill="url(#dot_1)" opacity="0.5"/>
-  
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#FF5500" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#FF5500" stroke-width="2"/>
-  
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#FF5500" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
-  
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#FF5500" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF5500" font-weight="bold">SYS.OP // VOL_01 // BIOMECHANICA</text>
-  
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0xEB 7C 93</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 7ms</text>
-  
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#FF5500">EB 7C 93 CD 01 40 1E 07 CD C1 C3 48</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#FF5500">84 3C 1C DC 70 E1 04 10 DC 39 C7 BE</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#FF5500">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <rect width="800" height="250" fill="url(#blood-tech)"/>
+  <rect width="800" height="250" fill="url(#hex-grid)"/>
+  <path d="M50,125 Q200,10 400,125 T750,125" fill="none" stroke="#ff2a2a" stroke-width="3" filter="url(#flesh-glitch)" opacity="0.8"/>
+  <path d="M50,140 Q250,220 450,140 T750,140" fill="none" stroke="#cc1111" stroke-width="2" filter="url(#flesh-glitch)" opacity="0.6"/>
+  <circle cx="400" cy="125" r="40" fill="none" stroke="#ff5555" stroke-width="1" filter="url(#flesh-glitch)"/>
+  <circle cx="400" cy="125" r="30" fill="none" stroke="#aa2222" stroke-width="2"/>
+  <path d="M 380 125 L 420 125 M 400 105 L 400 145" stroke="#ff0000" stroke-width="1"/>
+  <!-- UI Overlays -->
+  <rect x="20" y="20" width="200" height="60" fill="#000" stroke="#aa2222" stroke-width="1" opacity="0.8"/>
+  <text x="30" y="40" font-family="monospace" font-size="12" fill="#ff5555" font-weight="bold">BIO_NODE: OFFLINE</text>
+  <text x="30" y="55" font-family="monospace" font-size="10" fill="#cc3333">TISSUE_DECAY_RATE: 0.84%</text>
+  <text x="30" y="70" font-family="monospace" font-size="10" fill="#cc3333">CYBER_REJECTION: ACTIVE</text>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#aa2222" stroke-width="0.5" stroke-dasharray="5 5"/>
+  <text x="700" y="240" font-family="monospace" font-size="10" fill="#881111">SECTOR-NULL / WETWARE</text>
 </svg>
 </div>
 

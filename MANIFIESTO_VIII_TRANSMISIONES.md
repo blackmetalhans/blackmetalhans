@@ -1,53 +1,43 @@
 ![TELEMETRY_LOG](assets/MANIFIESTO_VIII.jpg)
 
 <div align="center">
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="grid_8" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    <pattern id="radar-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#002200" stroke-width="1"/>
     </pattern>
-    <pattern id="dot_8" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2A2A2A"/>
-    </pattern>
-    <linearGradient id="grad_8" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
   </defs>
+  <rect width="800" height="250" fill="#000500"/>
+  <rect width="800" height="250" fill="url(#radar-grid)"/>
   
-  <!-- Backgrounds -->
-  <rect width="800" height="220" fill="url(#grad_8)"/>
-  <rect width="800" height="220" fill="url(#grid_8)"/>
-  <rect width="800" height="220" fill="url(#dot_8)" opacity="0.5"/>
+  <!-- Radar circles -->
+  <circle cx="400" cy="125" r="100" fill="none" stroke="#004400" stroke-width="1"/>
+  <circle cx="400" cy="125" r="75" fill="none" stroke="#004400" stroke-width="1"/>
+  <circle cx="400" cy="125" r="50" fill="none" stroke="#004400" stroke-width="1"/>
+  <circle cx="400" cy="125" r="25" fill="none" stroke="#004400" stroke-width="1"/>
   
-  <!-- Tech Borders & Crosshairs -->
-  <rect x="10" y="10" width="780" height="200" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="15" y="15" width="770" height="190" fill="none" stroke="#222" stroke-width="1"/>
-  <path d="M 5 20 L 15 20 M 20 5 L 20 15 M 795 20 L 785 20 M 780 5 L 780 15" stroke="#FF003C" stroke-width="2"/>
-  <path d="M 5 200 L 15 200 M 20 215 L 20 205 M 795 200 L 785 200 M 780 215 L 780 205" stroke="#FF003C" stroke-width="2"/>
+  <!-- Radar Crosshairs -->
+  <line x1="300" y1="125" x2="500" y2="125" stroke="#005500" stroke-width="1"/>
+  <line x1="400" y1="25" x2="400" y2="225" stroke="#005500" stroke-width="1"/>
   
-  <!-- Waveform / Telemetry Graph -->
-  <path d="M 30,150 L 150,150 L 180,80 L 220,180 L 260,110 L 290,150 L 500,150 L 520,100 L 550,150 L 770,150" stroke="#FF003C" stroke-width="1.5" fill="none" stroke-linejoin="bevel"/>
-  <path d="M 30,160 L 770,160" stroke="#222" stroke-width="1" stroke-dasharray="4 4"/>
-  <path d="M 30,110 L 770,110" stroke="#222" stroke-width="1" stroke-dasharray="2 6"/>
+  <!-- Sweep arc -->
+  <path d="M 400,125 L 470,55 A 100 100 0 0 0 400,25 Z" fill="#00ff00" opacity="0.2"/>
+  <line x1="400" y1="125" x2="470" y2="55" stroke="#00ff00" stroke-width="2"/>
   
-  <!-- Overlay UI Elements -->
-  <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#FF003C" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF003C" font-weight="bold">SYS.OP // VOL_08 // TRANSMISIONES</text>
+  <!-- Blips -->
+  <circle cx="440" cy="100" r="3" fill="#00ff00"/>
+  <text x="450" y="105" font-family="monospace" font-size="10" fill="#00ff00">SIGNAL_FOUND</text>
   
-  <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0xF4 06 17</text>
-  <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 8ms</text>
+  <!-- Bunker Schematic overlay -->
+  <rect x="50" y="150" width="150" height="80" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <rect x="60" y="160" width="130" height="60" fill="none" stroke="#006600" stroke-width="1"/>
+  <line x1="125" y1="150" x2="125" y2="230" stroke="#006600" stroke-width="1"/>
+  <text x="55" y="140" font-family="monospace" font-size="10" fill="#00ff00">SECTOR-NULL BUNKER PLAN</text>
   
-  <!-- Hex Dump -->
-  <text x="600" y="40" font-family="monospace" font-size="10" fill="#555">MEM DUMP:</text>
-  <text x="600" y="55" font-family="monospace" font-size="10" fill="#FF003C">F4 06 17 0E 36 C2 C0 FB A2 EA C8 F0</text>
-  <text x="600" y="70" font-family="monospace" font-size="10" fill="#FF003C">0F 8C AE 2A BF 0C 2C 63 E0 71 60 4F</text>
-  
-  <!-- Status Indicator -->
-  <circle cx="750" cy="185" r="4" fill="#FF003C">
-    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="690" y="188" font-family="monospace" font-size="10" fill="#888">NODE ACTIVE</text>
+  <!-- Text UI -->
+  <text x="600" y="30" font-family="monospace" font-size="12" fill="#00ff00">TRANSMISSION: BROADCASTING</text>
+  <text x="600" y="45" font-family="monospace" font-size="10" fill="#00aa00">WINTER ISOLATION MODE</text>
+  <text x="600" y="60" font-family="monospace" font-size="10" fill="#00aa00">FREQ: 144.0 MHz</text>
 </svg>
 </div>
 
