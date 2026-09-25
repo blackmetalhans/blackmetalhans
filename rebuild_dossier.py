@@ -14,9 +14,8 @@ files = [
     "MANIFIESTO_VI_MUSICA.md",
     "MANIFIESTO_VII_COSMOLOGIA.md",
     "MANIFIESTO_VIII_TRANSMISIONES.md",
-    "MANIFIESTO_IX_ONTOLOGIA.md",
-    "MANIFIESTO_X_CONFESION.md",
-    "MANIFIESTO_XI_APENDICE.md",
+        "MANIFIESTO_IX_CONFESION.md",
+    "MANIFIESTO_X_APENDICE.md",
 ]
 
 with open(output_file, 'w', encoding='utf-8') as outfile:

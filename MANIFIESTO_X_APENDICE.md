@@ -34,7 +34,7 @@
   
   <!-- Overlay UI Elements -->
   <rect x="30" y="30" width="250" height="25" fill="#111" stroke="#FF5500" stroke-width="1"/>
-  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF5500" font-weight="bold">SYS.OP // VOL_11 // APENDICE</text>
+  <text x="40" y="47" font-family="monospace" font-size="12" fill="#FF5500" font-weight="bold">SYS.OP // VOL_10 // APENDICE</text>
   
   <text x="30" y="80" font-family="monospace" font-size="10" fill="#666">[METRICS] BUFFER: 0x5C 81 43</text>
   <text x="30" y="95" font-family="monospace" font-size="10" fill="#666">[LINK] UPLINK SECURE | LATENCY: 10ms</text>
@@ -53,12 +53,12 @@
 </div>
 
 
-# TRANSMISIÓN // PARTE XI: APÉNDICE TÉCNICO, ÍNDICE DE CITAS Y DATOS ZIPFIANOS
+# TRANSMISIÓN // PARTE X: APÉNDICE TÉCNICO, ÍNDICE DE CITAS Y DATOS ZIPFIANOS
 # TRANSMISSION // PART IX: TECHNICAL APPENDIX, QUOTE INDEX & ZIPFIAN DATA
 
 ```
 ================================================================================
-ARCHIVE GATEWAY // PARTE XI: APÉNDICE GENERAL Y REGISTRO FORENSE
+ARCHIVE GATEWAY // PARTE X: APÉNDICE GENERAL Y REGISTRO FORENSE
 REPOSITORY: GITHUB.COM/BLACKMETALOPERATOR // CLASSIFICATION: DECLASSIFIED TELEMETRY
 CONTENTS:
   [I]   MASTER VERBATIM QUOTE INDEX (CITAS 01 - 35 + 40 EXTRA TRANSCRIPTS)
@@ -637,7 +637,7 @@ STATION: NODE-DARK-HARVEST // LOCATION: RURAL SECTOR-NULL, ZONE-X
 
 ```
 ================================================================================
-END OF TRANSMISSION // PARTE XI: APÉNDICE
+END OF TRANSMISSION // PARTE X: APÉNDICE
 HASH VERIFICATION: B77C0142AEE91 // AUDIT STATUS: COMPLIANT WITH ZERO DISCLOSURES
 ALL 35+ QUOTES SERIALIZED // FULL TECHNICAL GLOSSARY DEPLOYED // ZIPF ALPHA VERIFIED
 ================================================================================
