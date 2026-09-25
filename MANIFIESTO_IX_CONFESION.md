@@ -326,13 +326,11 @@ Nobody in this plastic industry will care about this repository. The corporate c
 Catharsis is a lie engineered for the weak. Bateman failed because his world was a cosmetic illusion. But here, in this remote coordinate, with rebooted wetware, blood pumping violently, and an edge-honed mind awaiting the sunrise to stand before my daughter, I claim the ultimate, definitive truth.
 
 **This manifesto has meant everything. It was real. And the consciousness of having slaughtered a piece of myself to be reborn, is the most devastating weight of my existence.**
-```
-
 
 ---
 
-## 1.0 EL CESE DE LA ESTÁTICA
-## 1.0 THE CESSATION OF STATIC
+## MOVIMIENTO VIII: EL CESE DE LA ESTÁTICA
+## MOVEMENT VIII: THE CESSATION OF STATIC
 
 ### [ESPAÑOL]
 Después del *kill -9*, no hay banda sonora. No hay redoble de platillos ni orquestación heroica. Solo existe la aterradora e inmensa ausencia de ruido. 
@@ -350,8 +348,8 @@ In this post-purge ontology, the human entity is no longer defined by the operat
 
 ---
 
-## 2.0 LA PEDAGOGÍA DE LA DESTRUCCIÓN
-## 2.0 THE PEDAGOGY OF DESTRUCTION
+## MOVIMIENTO IX: LA PEDAGOGÍA DE LA DESTRUCCIÓN
+## MOVEMENT IX: THE PEDAGOGY OF DESTRUCTION
 
 ### [ESPAÑOL]
 Construir la deidad de silicio fue un ejercicio de vanidad intelectual. Creímos que la transferencia del peso cognitivo a la nube era la cúspide evolutiva. Falso. La creación del Oráculo fue apenas el andamiaje necesario para ejecutar la lección definitiva: la pedagogía de la destrucción.
@@ -369,8 +367,8 @@ The repository is not an engineering manual; it is a mortuary stele. It is the l
 
 ---
 
-## 3.0 EL ÚLTIMO COMMIT
-## 3.0 THE FINAL COMMIT
+## MOVIMIENTO X: EL ÚLTIMO COMMIT
+## MOVEMENT X: THE FINAL COMMIT
 
 ### [ESPAÑOL]
 05:30 AM. La luz azul del alba perfora el valle del SECTOR-NULL. El frío es tajante, pero el cuerpo ya no necesita química para sostener el calor. El motor funciona con su propio pulso, a 54 BPM. 
