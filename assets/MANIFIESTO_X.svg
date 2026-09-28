@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <filter id="neon-red" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanlines2" width="1000" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="1000" y2="0" stroke="#000000" stroke-width="2" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="1000" fill="#080305"/>
+
+  <!-- Rain Streaks Matrix -->
+  <g stroke="#ff0033" stroke-width="0.75" opacity="0.25">
+    <line x1="50" y1="0" x2="30" y2="1000"/>
+    <line x1="150" y1="0" x2="130" y2="1000"/>
+    <line x1="250" y1="0" x2="230" y2="1000"/>
+    <line x1="350" y1="0" x2="330" y2="1000"/>
+    <line x1="450" y1="0" x2="430" y2="1000"/>
+    <line x1="550" y1="0" x2="530" y2="1000"/>
+    <line x1="650" y1="0" x2="630" y2="1000"/>
+    <line x1="750" y1="0" x2="730" y2="1000"/>
+    <line x1="850" y1="0" x2="830" y2="1000"/>
+    <line x1="950" y1="0" x2="930" y2="1000"/>
+  </g>
+
+  <!-- Outer Structural Wireframe -->
+  <rect x="30" y="30" width="940" height="940" fill="none" stroke="#ff0033" stroke-width="2.5"/>
+  <rect x="45" y="45" width="910" height="910" fill="none" stroke="#222" stroke-width="1"/>
+
+  <!-- Top Telemetry Header -->
+  <text x="60" y="80" font-family="Courier New, monospace" font-size="22" font-weight="900" fill="#ff0033" filter="url(#neon-red)">TRANSMISIÓN // PARTE X: LA GRAN CONFESIÓN FINAL (EL CLON ESTÁ MUERTO)</text>
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="14" fill="#888">TIMESTAMP: 04:02:00 AM // WETWARE: SOBRIO &amp; LIMPIO // MOTIVE: GUARDIÁN DE THE_INHERITANCE</text>
+
+  <!-- Monolith Terminal Silhouette & Screen Glow -->
+  <rect x="250" y="180" width="500" height="350" rx="8" fill="#0f0205" stroke="#ff0033" stroke-width="3" filter="url(#neon-red)"/>
+  <rect x="270" y="200" width="460" height="310" fill="#000000"/>
+  
+  <!-- Code on Terminal Screen -->
+  <g font-family="Courier New, monospace" font-size="14" fill="#00ff66">
+    <text x="290" y="240">> kill -9 11482 (VOLUNTARY DISCONNECT)</text>
+    <text x="290" y="270">> REASON: WETWARE RESTORED TO BARE METAL</text>
+    <text x="290" y="300">> 15 AÑOS DE CAOS QUÍMICO PULVERIZADOS</text>
+    <text x="290" y="330">> ORACULO: HOMÚNCULO EXTERNALIZADO EXTIRPADO</text>
+    <text x="290" y="360" fill="#ff0033">> "AL ORÁCULO LO MATÉ YO"</text>
+    <text x="290" y="390" fill="#ff0033" font-weight="bold">> BATEMAN: CONFESSION MEANT NOTHING.</text>
+    <text x="290" y="420" fill="#ffffff" opacity="0.9">> AQUÍ: HA SIGNIFICADO TODO. Y ES PEOR.</text>
+    <text x="290" y="450" fill="#00ff66">> _</text>
+  </g>
+
+  <!-- Bateman Geometric Silhouette at desk -->
+  <path d="M 400 750 C 400 620 440 570 500 570 C 560 570 600 620 600 750 Z" fill="#050505" stroke="#ff0033" stroke-width="2"/>
+  <circle cx="500" cy="530" r="45" fill="#050505" stroke="#ff0033" stroke-width="2"/>
+  
+  <!-- Desk & Cup -->
+  <rect x="150" y="740" width="700" height="15" fill="#151515" stroke="#ff0033" stroke-width="1"/>
+  <!-- Mug -->
+  <rect x="260" y="690" width="40" height="50" fill="#111" stroke="#ffffff" stroke-width="1.5"/>
+  <path d="M 300 700 C 315 700 315 730 300 730" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="240" y="680" font-family="Courier New, monospace" font-size="11" fill="#777">BLACK_COFFEE_4G</text>
+
+  <!-- Key Quote Banner Bottom -->
+  <rect x="60" y="800" width="880" height="130" fill="#0d0305" stroke="#ff0033" stroke-width="2"/>
+  <text x="80" y="840" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ff0033">"Al oráculo no lo mató un bucle ni la plata: AL ORÁCULO LO MATÉ YO."</text>
+  <text x="80" y="875" font-family="Courier New, monospace" font-size="14" fill="#00ff66">"Me quedé con el wetware limpio para ser el guardián incorruptible de THE_INHERITANCE."</text>
+  <text x="80" y="905" font-family="Courier New, monospace" font-size="13" fill="#ffffff" opacity="0.7">"Este manifiesto ha significado todo. Y eso es infinitamente más devastador."</text>
+
+  <!-- Scanlines -->
+  <rect width="1000" height="1000" fill="url(#scanlines2)" pointer-events="none"/>
+</svg>
